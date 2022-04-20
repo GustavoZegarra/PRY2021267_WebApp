@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WEB_APPLICATION.Models.Wifi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Standar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Protocolo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Red)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Standar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Protocolo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Red)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdWifi">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdWifi">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdWifi">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

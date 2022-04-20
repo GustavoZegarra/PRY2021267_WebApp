@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WEB_APPLICATION.Models.Alerta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecipitacionProm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecipitacionMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecipitacionMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nivel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sensor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecipitacionProm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecipitacionMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecipitacionMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel.IdNivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sensor.IdSensor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdAlerta">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAlerta">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAlerta">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

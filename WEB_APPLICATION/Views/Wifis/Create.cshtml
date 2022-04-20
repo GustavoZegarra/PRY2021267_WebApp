@@ -1,0 +1,48 @@
+﻿@model WEB_APPLICATION.Models.Wifi
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Wifi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <input asp-for="Modelo" class="form-control" />
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Standar" class="control-label"></label>
+                <input asp-for="Standar" class="form-control" />
+                <span asp-validation-for="Standar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Protocolo" class="control-label"></label>
+                <input asp-for="Protocolo" class="form-control" />
+                <span asp-validation-for="Protocolo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Red" class="control-label"></label>
+                <input asp-for="Red" class="form-control" />
+                <span asp-validation-for="Red" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

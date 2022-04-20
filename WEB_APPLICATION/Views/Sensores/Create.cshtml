@@ -1,0 +1,51 @@
+﻿@model WEB_APPLICATION.Models.Sensor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Sensor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <input asp-for="Modelo" class="form-control" />
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecipitacionMax" class="control-label"></label>
+                <input asp-for="PrecipitacionMax" class="form-control" />
+                <span asp-validation-for="PrecipitacionMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecipitacionMin" class="control-label"></label>
+                <input asp-for="PrecipitacionMin" class="form-control" />
+                <span asp-validation-for="PrecipitacionMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdQuebrada" class="control-label"></label>
+                <select asp-for="IdQuebrada" class ="form-control" asp-items="ViewBag.IdQuebrada"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdWifi" class="control-label"></label>
+                <select asp-for="IdWifi" class ="form-control" asp-items="ViewBag.IdWifi"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
