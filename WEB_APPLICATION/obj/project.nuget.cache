@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YHNJD8NJL0pPxAmMuSrAOSsdtUJt3agOiPlWQQxHTnz23VTjZByAl72vkwZmHrzN6xvd5ioyzbrsZQGLlAtXJw==",
+  "dgSpecHash": "vukw0LbXy+9m6XjJhwMYj7J48+H6fPfkVoEH4i0OzaqTeMgJhYFfJShHzhUApAr7xzUcg10YwqgjbNeBTYSkIQ==",
   "success": true,
-  "projectFilePath": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEB_APPLICATION\\WEB_APPLICATION\\WEB_APPLICATION.csproj",
+  "projectFilePath": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\WEB_APPLICATION.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\piero\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\piero\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

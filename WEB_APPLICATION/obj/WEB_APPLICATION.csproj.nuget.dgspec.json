@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEB_APPLICATION\\WEB_APPLICATION\\WEB_APPLICATION.csproj": {}
+    "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\WEB_APPLICATION.csproj": {}
   },
   "projects": {
-    "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEB_APPLICATION\\WEB_APPLICATION\\WEB_APPLICATION.csproj": {
+    "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\WEB_APPLICATION.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEB_APPLICATION\\WEB_APPLICATION\\WEB_APPLICATION.csproj",
+        "projectUniqueName": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\WEB_APPLICATION.csproj",
         "projectName": "WEB_APPLICATION",
-        "projectPath": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEB_APPLICATION\\WEB_APPLICATION\\WEB_APPLICATION.csproj",
+        "projectPath": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\WEB_APPLICATION.csproj",
         "packagesPath": "C:\\Users\\piero\\.nuget\\packages\\",
-        "outputPath": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEB_APPLICATION\\WEB_APPLICATION\\obj\\",
+        "outputPath": "C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\piero\\AppData\\Roaming\\NuGet\\NuGet.Config",
