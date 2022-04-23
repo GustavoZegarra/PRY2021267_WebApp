@@ -112,7 +112,7 @@ namespace WEB_APPLICATION.Models
                 //Relacion 1 a 1 Usuario con DNI
                 entity.HasOne(e => e.Usuario)
                .WithOne(e => e.DNI)
-               .HasForeignKey<Usuario>(e => e.IdDni)
+               .HasForeignKey<Usuario>(e => e.IdDni).OnDelete(DeleteBehavior.Cascade)
                .HasConstraintName("FK_Usuario_Dni");
 
             });
@@ -175,7 +175,7 @@ namespace WEB_APPLICATION.Models
                 //Relacion 1 a 1 con Pasaporte
                 entity.HasOne(e => e.Usuario)
                .WithOne(e => e.Pasaporte)
-               .HasForeignKey<Usuario>(e => e.IdPasaporte)
+               .HasForeignKey<Usuario>(e => e.IdPasaporte).OnDelete(DeleteBehavior.Cascade)
                .HasConstraintName("FK_Usuario_Pasaporte");
 
 
@@ -248,8 +248,6 @@ namespace WEB_APPLICATION.Models
                .WithMany(e => e.Incidentes)
                .HasForeignKey(e => e.IdMotivo)
                .HasConstraintName("FK_Incidente_Motivo");
-
-
 
 
             });

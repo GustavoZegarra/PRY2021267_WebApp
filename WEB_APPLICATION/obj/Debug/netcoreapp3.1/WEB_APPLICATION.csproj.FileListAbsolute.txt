@@ -474,3 +474,8 @@ C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\WEB_APPLICATION.dll
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\WEB_APPLICATION.pdb
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\WEB_APPLICATION.genruntimeconfig.cache
+C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNI\Create.cshtml.g.cs
+C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNI\Delete.cshtml.g.cs
+C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNI\Details.cshtml.g.cs
+C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNI\Edit.cshtml.g.cs
+C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNI\Index.cshtml.g.cs

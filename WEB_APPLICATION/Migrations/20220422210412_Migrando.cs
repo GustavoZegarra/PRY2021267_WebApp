@@ -333,13 +333,13 @@ namespace WEB_APPLICATION.Migrations
                         column: x => x.IdDni,
                         principalTable: "DNI",
                         principalColumn: "IdDni",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Usuario_Pasaporte",
                         column: x => x.IdPasaporte,
                         principalTable: "Pasaporte",
                         principalColumn: "IdPasaporte",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

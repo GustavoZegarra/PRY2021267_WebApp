@@ -9,23 +9,23 @@ using WEB_APPLICATION.Models;
 
 namespace WEB_APPLICATION.Controllers
 {
-    public class DNIsController : Controller
+    public class DNIController : Controller
     {
         private readonly DbApiApplicationContext _context;
 
-        public DNIsController(DbApiApplicationContext context)
+        public DNIController(DbApiApplicationContext context)
         {
             _context = context;
         }
 
-        // GET: DNIs
+        // GET: DNI
         public async Task<IActionResult> Index()
         {
             var dbApiApplicationContext = _context.DNIs.Include(d => d.Distrito);
             return View(await dbApiApplicationContext.ToListAsync());
         }
 
-        // GET: DNIs/Details/5
+        // GET: DNI/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,31 +44,31 @@ namespace WEB_APPLICATION.Controllers
             return View(dNI);
         }
 
-        // GET: DNIs/Create
+        // GET: DNI/Create
         public IActionResult Create()
         {
             ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito");
             return View();
         }
 
-        // POST: DNIs/Create
+        // POST: DNI/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdDni,Dni,CodVerificacion,Direccion,Referencia,IdDistrito")] DNI dNI)
+        public async Task<IActionResult> Create([Bind("IdDni,Dni,CodVerificacion,Direccion,Referencia,IdDistrito")] DNI odni)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(dNI);
+                _context.Add(odni);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito", dNI.IdDistrito);
-            return View(dNI);
+            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito", odni.IdDistrito);
+            return View(odni);
         }
 
-        // GET: DNIs/Edit/5
+        // GET: DNI/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -85,14 +85,14 @@ namespace WEB_APPLICATION.Controllers
             return View(dNI);
         }
 
-        // POST: DNIs/Edit/5
+        // POST: DNI/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdDni,Dni,CodVerificacion,Direccion,Referencia,IdDistrito")] DNI dNI)
+        public async Task<IActionResult> Edit(int id, [Bind("IdDni,Dni,CodVerificacion,Direccion,Referencia,IdDistrito")] DNI odni)
         {
-            if (id != dNI.IdDni)
+            if (id != odni.IdDni)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace WEB_APPLICATION.Controllers
             {
                 try
                 {
-                    _context.Update(dNI);
+                    _context.Update(odni);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DNIExists(dNI.IdDni))
+                    if (!DNIExists(odni.IdDni))
                     {
                         return NotFound();
                     }
@@ -117,11 +117,11 @@ namespace WEB_APPLICATION.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito", dNI.IdDistrito);
-            return View(dNI);
+            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito", odni.IdDistrito);
+            return View(odni);
         }
 
-        // GET: DNIs/Delete/5
+        // GET: DNI/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,7 +140,7 @@ namespace WEB_APPLICATION.Controllers
             return View(dNI);
         }
 
-        // POST: DNIs/Delete/5
+        // POST: DNI/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

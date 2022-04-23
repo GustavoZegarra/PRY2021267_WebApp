@@ -15,7 +15,7 @@ namespace WEB_APPLICATION.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.20")
+                .HasAnnotation("ProductVersion", "3.1.24")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -639,12 +639,14 @@ namespace WEB_APPLICATION.Migrations
                     b.HasOne("WEB_APPLICATION.Models.DNI", "DNI")
                         .WithOne("Usuario")
                         .HasForeignKey("WEB_APPLICATION.Models.Usuario", "IdDni")
-                        .HasConstraintName("FK_Usuario_Dni");
+                        .HasConstraintName("FK_Usuario_Dni")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("WEB_APPLICATION.Models.Pasaporte", "Pasaporte")
                         .WithOne("Usuario")
                         .HasForeignKey("WEB_APPLICATION.Models.Usuario", "IdPasaporte")
-                        .HasConstraintName("FK_Usuario_Pasaporte");
+                        .HasConstraintName("FK_Usuario_Pasaporte")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
