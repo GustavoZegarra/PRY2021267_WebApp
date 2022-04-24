@@ -48,8 +48,8 @@ namespace WEB_APPLICATION.Controllers
         // GET: Usuarios/Create
         public IActionResult Create()
         {
-            ViewData["IdDni"] = new SelectList(_context.DNIs, "IdDni", "IdDni");
-            ViewData["IdPasaporte"] = new SelectList(_context.Pasaportes, "IdPasaporte", "IdPasaporte");
+            ViewData["IdDni"] = new SelectList(_context.DNIs, "IdDni", "Dni");
+            ViewData["IdPasaporte"] = new SelectList(_context.Pasaportes, "IdPasaporte", "Nombre");
             return View();
         }
 
@@ -84,8 +84,8 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdDni"] = new SelectList(_context.DNIs, "IdDni", "IdDni", usuario.IdDni);
-            ViewData["IdPasaporte"] = new SelectList(_context.Pasaportes, "IdPasaporte", "IdPasaporte", usuario.IdPasaporte);
+            ViewData["IdDni"] = new SelectList(_context.DNIs, "IdDni", "Dni", usuario.IdDni);
+            ViewData["IdPasaporte"] = new SelectList(_context.Pasaportes, "IdPasaporte", "Nombre", usuario.IdPasaporte);
             return View(usuario);
         }
 

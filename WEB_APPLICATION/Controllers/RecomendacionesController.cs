@@ -47,7 +47,7 @@ namespace WEB_APPLICATION.Controllers
         // GET: Recomendaciones/Create
         public IActionResult Create()
         {
-            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "IdNivel");
+            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "Riesgo");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "IdNivel", recomendacion.IdNivel);
+            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "Riesgo", recomendacion.IdNivel);
             return View(recomendacion);
         }
 

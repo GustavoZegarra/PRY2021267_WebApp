@@ -395,11 +395,6 @@ C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\Distritos\Details.cshtml.g.cs
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\Distritos\Edit.cshtml.g.cs
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\Distritos\Index.cshtml.g.cs
-C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNIs\Create.cshtml.g.cs
-C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNIs\Delete.cshtml.g.cs
-C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNIs\Details.cshtml.g.cs
-C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNIs\Edit.cshtml.g.cs
-C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\DNIs\Index.cshtml.g.cs
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\GPS\Create.cshtml.g.cs
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\GPS\Delete.cshtml.g.cs
 C:\Universidad_UltimoCiclo\TP2\System_admin_api\API_APPLICATION\MAPEO TP2\WEBAPP\PRY2021267_WebApp\WEB_APPLICATION\obj\Debug\netcoreapp3.1\Razor\Views\GPS\Details.cshtml.g.cs

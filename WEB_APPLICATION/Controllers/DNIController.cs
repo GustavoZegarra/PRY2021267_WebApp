@@ -47,7 +47,7 @@ namespace WEB_APPLICATION.Controllers
         // GET: DNI/Create
         public IActionResult Create()
         {
-            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito");
+            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "Nombre");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "IdDistrito", dNI.IdDistrito);
+            ViewData["IdDistrito"] = new SelectList(_context.Distritos, "IdDistrito", "Nombre", dNI.IdDistrito);
             return View(dNI);
         }
 

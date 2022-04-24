@@ -51,9 +51,9 @@ namespace WEB_APPLICATION.Controllers
         public IActionResult Create()
         {
             ViewData["IdGPS"] = new SelectList(_context.GPSes, "IdGps", "IdGps");
-            ViewData["IdMotivo"] = new SelectList(_context.Motivos, "IdMotivo", "IdMotivo");
-            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "IdQuebrada");
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario");
+            ViewData["IdMotivo"] = new SelectList(_context.Motivos, "IdMotivo", "Detalle");
+            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "Nombre");
+            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombre");
             return View();
         }
 
@@ -91,9 +91,9 @@ namespace WEB_APPLICATION.Controllers
                 return NotFound();
             }
             ViewData["IdGPS"] = new SelectList(_context.GPSes, "IdGps", "IdGps", incidente.IdGPS);
-            ViewData["IdMotivo"] = new SelectList(_context.Motivos, "IdMotivo", "IdMotivo", incidente.IdMotivo);
-            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "IdQuebrada", incidente.IdQuebrada);
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", incidente.IdUsuario);
+            ViewData["IdMotivo"] = new SelectList(_context.Motivos, "IdMotivo", "Detalle", incidente.IdMotivo);
+            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "Nombre", incidente.IdQuebrada);
+            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "Nombre", incidente.IdUsuario);
             return View(incidente);
         }
 

@@ -47,7 +47,7 @@ namespace WEB_APPLICATION.Controllers
         // GET: Motivos/Create
         public IActionResult Create()
         {
-            ViewData["IdCategoria"] = new SelectList(_context.Categorias, "IdCategoria", "IdCategoria");
+            ViewData["IdCategoria"] = new SelectList(_context.Categorias, "IdCategoria", "Detalle");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categorias, "IdCategoria", "IdCategoria", motivo.IdCategoria);
+            ViewData["IdCategoria"] = new SelectList(_context.Categorias, "IdCategoria", "Detalle", motivo.IdCategoria);
             return View(motivo);
         }
 

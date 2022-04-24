@@ -47,7 +47,7 @@ namespace WEB_APPLICATION.Controllers
         // GET: Pais/Create
         public IActionResult Create()
         {
-            ViewData["IdContinente"] = new SelectList(_context.Continentes, "IdContinente", "IdContinente");
+            ViewData["IdContinente"] = new SelectList(_context.Continentes, "IdContinente", "Nombre");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdContinente"] = new SelectList(_context.Continentes, "IdContinente", "IdContinente", pais.IdContinente);
+            ViewData["IdContinente"] = new SelectList(_context.Continentes, "IdContinente", "Nombre", pais.IdContinente);
             return View(pais);
         }
 

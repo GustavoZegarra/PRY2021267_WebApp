@@ -48,8 +48,8 @@ namespace WEB_APPLICATION.Controllers
         // GET: Alertas/Create
         public IActionResult Create()
         {
-            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "IdNivel");
-            ViewData["IdSensor"] = new SelectList(_context.Sensores, "IdSensor", "IdSensor");
+            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "Riesgo");
+            ViewData["IdSensor"] = new SelectList(_context.Sensores, "IdSensor", "Modelo");
             return View();
         }
 
@@ -84,8 +84,8 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "IdNivel", alerta.IdNivel);
-            ViewData["IdSensor"] = new SelectList(_context.Sensores, "IdSensor", "IdSensor", alerta.IdSensor);
+            ViewData["IdNivel"] = new SelectList(_context.Niveles, "IdNivel", "Riesgo", alerta.IdNivel);
+            ViewData["IdSensor"] = new SelectList(_context.Sensores, "IdSensor", "Modelo", alerta.IdSensor);
             return View(alerta);
         }
 

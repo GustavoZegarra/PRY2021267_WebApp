@@ -47,7 +47,7 @@ namespace WEB_APPLICATION.Controllers
         // GET: Distritos/Create
         public IActionResult Create()
         {
-            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "IdProvincia", "IdProvincia");
+            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "IdProvincia", "Nombre");
             return View();
         }
 
@@ -81,7 +81,7 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "IdProvincia", "IdProvincia", distrito.IdProvincia);
+            ViewData["IdProvincia"] = new SelectList(_context.Provincias, "IdProvincia", "Nombre", distrito.IdProvincia);
             return View(distrito);
         }
 
