@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -60,6 +61,22 @@ namespace WEB_APPLICATION.Controllers
         {
             if (ModelState.IsValid)
             {
+                var dnis = _context.DNIs.ToList();
+                bool flag = false;
+                foreach (DNI dni in dnis)
+                {
+                    if (dni.Dni == odni.Dni)
+                    {
+                        flag = true;
+                    }
+                }
+                if (flag)
+                {
+                    Response.StatusCode = 400;
+                    return Content("<center><h2>El DNI escrito ya existe</h2></center>", "text/html");
+                }
+
+
                 _context.Add(odni);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

@@ -57,6 +57,21 @@ namespace WEB_APPLICATION.Controllers
         {
             if (ModelState.IsValid)
             {
+                var conti = _context.Continentes.ToList();
+                bool flag = false;
+                foreach (Continente con in conti)
+                {
+                    if (con.Nombre == continente.Nombre)
+                    {
+                        flag = true;
+                    }
+                }
+                if (flag)
+                {
+                    Response.StatusCode = 400;
+                    return Content("<center><h2>El Continente registrado ya existe</h2></center>", "text/html");
+                }
+
                 _context.Add(continente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
