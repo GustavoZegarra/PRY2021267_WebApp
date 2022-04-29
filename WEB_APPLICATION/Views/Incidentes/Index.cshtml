@@ -6,27 +6,27 @@
 
 <h1>Index</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
-            <th>
+     @*       <th>
                 @Html.DisplayNameFor(model => model.Imagen)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.FechaRegistro)
             </th>
-            <th>
+     @*       <th>
                 @Html.DisplayNameFor(model => model.FechaActualizacion)
-            </th>
-            <th>
+            </th>*@
+@*            <th>
                 @Html.DisplayNameFor(model => model.Resuelto)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Usuario)
             </th>
@@ -37,7 +37,10 @@
                 @Html.DisplayNameFor(model => model.Motivo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GPS)
+                Latitud
+            </th>
+            <th>
+                Longitud
             </th>
             <th></th>
         </tr>
@@ -48,18 +51,18 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Imagen)
-            </td>
+        @*    <td>
+                @Html.DisplayFor(modelItem => item.Imagen)*             
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.FechaRegistro)
             </td>
-            <td>
+       @*     <td>
                 @Html.DisplayFor(modelItem => item.FechaActualizacion)
-            </td>
-            <td>
+            </td>*@
+@*            <td>
                 @Html.DisplayFor(modelItem => item.Resuelto)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Usuario.Nombre)
             </td>
@@ -70,10 +73,13 @@
                 @Html.DisplayFor(modelItem => item.Motivo.Detalle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GPS.IdGps)
+                @Html.DisplayFor(modelItem => item.GPS.Latitud)
+            </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.GPS.Longitud)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdIncidente">Edit</a> |
+               @* <a asp-action="Edit" asp-route-id="@item.IdIncidente">Edit</a> |*@
                 <a asp-action="Details" asp-route-id="@item.IdIncidente">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdIncidente">Delete</a>
             </td>

@@ -57,6 +57,17 @@ namespace WEB_APPLICATION.Controllers
             return View();
         }
 
+        public async Task<IActionResult> RenderImage(int id)
+        {
+            Incidente item = await _context.Incidentes.FindAsync(id);
+
+            byte[] photoBack = item.Imagen;
+
+            return File(photoBack, "image/png");
+        }
+
+
+
         // POST: Incidentes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.

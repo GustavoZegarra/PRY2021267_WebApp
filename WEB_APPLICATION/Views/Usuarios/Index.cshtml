@@ -6,9 +6,9 @@
 
 <h1>Index</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -18,9 +18,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Correo)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.Token)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Celular)
             </th>
@@ -45,9 +45,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Correo)
             </td>
-            <td>
+@*            <td>
                 @Html.DisplayFor(modelItem => item.Token)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Celular)
             </td>
@@ -61,7 +61,7 @@
                 @Html.DisplayFor(modelItem => item.Pasaporte.Numero)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdUsuario">Edit</a> |
+               @* <a asp-action="Edit" asp-route-id="@item.IdUsuario">Edit</a> |*@
                 <a asp-action="Details" asp-route-id="@item.IdUsuario">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdUsuario">Delete</a>
             </td>

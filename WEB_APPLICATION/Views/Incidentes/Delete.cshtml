@@ -21,7 +21,8 @@
             @Html.DisplayNameFor(model => model.Imagen)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Imagen)
+            @*@Html.DisplayFor(model => model.Imagen)*@
+            <img src="@Url.Action("RenderImage", new { id = @Model.IdIncidente})" alt="" height="150" width="300"  />
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.FechaRegistro)
