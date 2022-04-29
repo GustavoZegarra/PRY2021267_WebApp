@@ -48,8 +48,8 @@ namespace WEB_APPLICATION.Controllers
         // GET: Sensores/Create
         public IActionResult Create()
         {
-            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "IdQuebrada");
-            ViewData["IdWifi"] = new SelectList(_context.Wifis, "IdWifi", "IdWifi");
+            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "Nombre");
+            ViewData["IdWifi"] = new SelectList(_context.Wifis, "IdWifi", "Modelo");
             return View();
         }
 
@@ -84,8 +84,8 @@ namespace WEB_APPLICATION.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "IdQuebrada", sensor.IdQuebrada);
-            ViewData["IdWifi"] = new SelectList(_context.Wifis, "IdWifi", "IdWifi", sensor.IdWifi);
+            ViewData["IdQuebrada"] = new SelectList(_context.Quebradas, "IdQuebrada", "Nombre", sensor.IdQuebrada);
+            ViewData["IdWifi"] = new SelectList(_context.Wifis, "IdWifi", "Modelo", sensor.IdWifi);
             return View(sensor);
         }
 
