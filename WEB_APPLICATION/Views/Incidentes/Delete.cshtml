@@ -60,12 +60,18 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Motivo.Detalle)
         </dd class>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GPS)
+           <dt class = "col-sm-2">
+            Latitud
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GPS.IdGps)
-        </dd class>
+            @Html.DisplayFor(model => model.GPS.Latitud)
+        </dd>
+           <dt class = "col-sm-2">
+            Longitud
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GPS.Longitud)
+        </dd>
     </dl>
     
     <form asp-action="Delete">

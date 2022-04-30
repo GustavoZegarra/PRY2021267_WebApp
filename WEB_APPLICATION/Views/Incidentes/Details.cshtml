@@ -60,10 +60,16 @@
             @Html.DisplayFor(model => model.Motivo.Detalle)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GPS)
+            Latitud
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GPS.IdGps)
+            @Html.DisplayFor(model => model.GPS.Latitud)
+        </dd>
+           <dt class = "col-sm-2">
+            Longitud
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GPS.Longitud)
         </dd>
     </dl>
 </div>
