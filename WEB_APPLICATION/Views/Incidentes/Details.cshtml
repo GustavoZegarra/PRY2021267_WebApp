@@ -9,7 +9,7 @@
 <div>
     <h4>Incidente</h4>
     <hr />
-    <img src="@Url.Action("RenderImage", new { id = @Model.IdIncidente})" alt="" height="150" width="300"  />
+    <img src="@Url.Action("RenderImage", new { id = @Model.IdIncidente})" alt="" height="360" width="180"  />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Descripcion)
@@ -74,6 +74,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.IdIncidente">Edit</a> |
+   @* <a asp-action="Edit" asp-route-id="@Model.IdIncidente">Edit</a> |*@
     <a asp-action="Index">Back to List</a>
 </div>

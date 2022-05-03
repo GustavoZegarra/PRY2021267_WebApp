@@ -4,13 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Documentos de Identidad Registrados</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="thead-dark ">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Dni)
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Distrito.Nombre)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdDni">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdDni">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdDni">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdDni">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdDni">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdDni">Eliminar</a>
             </td>
         </tr>
 }

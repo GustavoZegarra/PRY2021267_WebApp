@@ -4,13 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Sensores Registrados</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="thead-dark ">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Modelo)
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Wifi.Modelo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdSensor">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdSensor">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdSensor">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdSensor">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdSensor">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdSensor">Eliminar</a>
             </td>
         </tr>
 }

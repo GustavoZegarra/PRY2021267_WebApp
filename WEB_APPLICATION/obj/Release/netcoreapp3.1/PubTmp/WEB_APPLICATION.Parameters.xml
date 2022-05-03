@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="safetysatweb" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Universidad_UltimoCiclo\\TP2\\System_admin_api\\API_APPLICATION\\MAPEO\ TP2\\WEBAPP\\PRY2021267_WebApp\\WEB_APPLICATION\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
