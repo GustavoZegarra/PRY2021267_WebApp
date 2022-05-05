@@ -19,10 +19,49 @@ namespace WEB_APPLICATION.Controllers
         }
 
         // GET: Incidentes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string categoria, string searchString)
         {
-            var dbApiApplicationContext = _context.Incidentes.Include(i => i.GPS).Include(i => i.Motivo).Include(i => i.Quebrada).Include(i => i.Usuario);
-            return View(await dbApiApplicationContext.ToListAsync());
+            var CategoLst = new List<string>();
+
+            var CateQry = from cate in _context.Categorias
+                          orderby cate.IdCategoria
+                          select cate.Detalle;
+
+            CategoLst.AddRange(CateQry.Distinct());
+            ViewBag.categoria = new SelectList(CategoLst);
+
+
+            var Incidentes = await _context.Incidentes.Include(i => i.GPS).Include(i => i.Motivo).
+                Include(i => i.Quebrada).Include(i => i.Usuario).Include(i => i.Motivo.Categoria).
+                Include(i => i.Usuario.DNI).OrderBy(p => p.Usuario.Nombre).ToListAsync();
+
+
+            if (!String.IsNullOrEmpty(searchString) && !String.IsNullOrEmpty(categoria)) {
+                Incidentes = await _context.Incidentes.Include(i => i.GPS).Include(i => i.Motivo).
+             Include(i => i.Quebrada).Include(i => i.Usuario).Include(i => i.Motivo.Categoria).
+             Where(p => p.Motivo.Categoria.Detalle == categoria && p.Usuario.Nombre.Contains(searchString)).Include(i => i.Usuario.DNI).ToListAsync();
+            }
+
+            else if (!String.IsNullOrEmpty(searchString))
+            {
+                //Incidentes = await _context.Incidentes.Include(i => i.GPS).Include(i => i.Motivo).
+                //Include(i => i.Quebrada).Include(i => i.Usuario).Include(i => i.Usuario.DNI).Where(p => p.Usuario.DNI.Dni == "74923362").ToListAsync();
+                Incidentes = await _context.Incidentes.Include(i => i.GPS).Include(i => i.Motivo).
+             Include(i => i.Quebrada).Include(i => i.Usuario).Where(p => p.Usuario.Nombre.Contains(searchString)).Include(i => i.Motivo.Categoria).
+             Include(i => i.Usuario.DNI).ToListAsync();
+
+            }
+
+            else if (!String.IsNullOrEmpty(categoria))
+            {
+                Incidentes = await _context.Incidentes.Include(i => i.GPS).Include(i => i.Motivo).
+             Include(i => i.Quebrada).Include(i => i.Usuario).Include(i => i.Motivo.Categoria).Where(p=>p.Motivo.Categoria.Detalle==categoria).
+             Include(i => i.Usuario.DNI).ToListAsync(); 
+            }
+
+
+
+            return View( Incidentes);
         }
 
         // GET: Incidentes/Details/5
