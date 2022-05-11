@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WEB_APPLICATION.Models;
+using WEB_APPLICATION.Repositories.Implements;
 
 namespace WEB_APPLICATION.Controllers
 {
@@ -18,11 +19,14 @@ namespace WEB_APPLICATION.Controllers
             _context = context;
         }
 
+
         // GET: Provincias
         public async Task<IActionResult> Index()
         {
-            var dbApiApplicationContext = _context.Provincias.Include(p => p.Departamento);
-            return View(await dbApiApplicationContext.ToListAsync());
+            //var ProvinciaRepository =new ProvinciaRepository(_context);
+
+            var provincias = await _context.Provincias.Include(p => p.Departamento).ToListAsync();
+            return View(provincias);
         }
 
         // GET: Provincias/Details/5
@@ -36,6 +40,10 @@ namespace WEB_APPLICATION.Controllers
             var provincia = await _context.Provincias
                 .Include(p => p.Departamento)
                 .FirstOrDefaultAsync(m => m.IdProvincia == id);
+
+
+            //var ProvinciaRepository = new ProvinciaRepository(_context);
+            //Provincia provincia = await ProvinciaRepository.GetById(id.Value);
             if (provincia == null)
             {
                 return NotFound();
@@ -77,6 +85,10 @@ namespace WEB_APPLICATION.Controllers
             }
 
             var provincia = await _context.Provincias.FindAsync(id);
+
+            //var ProvinciaRepository = new ProvinciaRepository(_context);
+            //Provincia provincia = await ProvinciaRepository.GetById(id.Value);
+
             if (provincia == null)
             {
                 return NotFound();

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WEB_APPLICATION.Models;
+using WEB_APPLICATION.Util;
+//using PagedList;
 
 namespace WEB_APPLICATION.Controllers
 {
@@ -19,10 +21,41 @@ namespace WEB_APPLICATION.Controllers
         }
 
         // GET: Alertas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string currentFilter,string quebrada,int? pageNumber)
         {
-            var dbApiApplicationContext = _context.Alertas.Include(a => a.Nivel).Include(a => a.Sensor);
-            return View(await dbApiApplicationContext.ToListAsync());
+
+            if (quebrada != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                quebrada = currentFilter;
+            }
+
+            ViewData["currentFilter"] = quebrada;
+
+            var AlertaLst= new List<string>();
+            var AlertaQry = from qd in _context.Quebradas
+                            orderby qd.IdQuebrada
+                            select qd.Nombre;
+            AlertaLst.AddRange(AlertaQry.Distinct());
+            
+            ViewBag.quebrada= new SelectList(AlertaLst);
+
+            var alertas =  _context.Alertas.Include(a => a.Nivel).Include(a => a.Sensor).Include(a=>a.Sensor.Quebrada).AsQueryable();
+        
+
+            if (!String.IsNullOrEmpty(quebrada))
+            {
+                alertas = _context.Alertas.Include(a => a.Nivel).Include(a => a.Sensor).
+                Include(a => a.Sensor.Quebrada).Where(p => p.Sensor.Quebrada.Nombre == quebrada).AsQueryable();
+            }
+            //return View( alertas);
+
+
+            int pageSize = 5;
+            return View(await PaginatedList<Alerta>.CreateAsync(alertas.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Alertas/Details/5
