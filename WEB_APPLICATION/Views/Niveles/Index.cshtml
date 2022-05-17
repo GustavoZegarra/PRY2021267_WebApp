@@ -15,12 +15,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.Riesgo)
             </th>
+              <th>
+                @Html.DisplayNameFor(model => model.PrecipitacionLimInf)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.PrecipitacionLimSup)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrecipitacionLimInf)
-            </th>
+          
             <th></th>
         </tr>
     </thead>
@@ -30,12 +31,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Riesgo)
             </td>
+               <td>
+                @Html.DisplayFor(modelItem => item.PrecipitacionLimInf)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PrecipitacionLimSup)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrecipitacionLimInf)
-            </td>
+         
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdNivel">Editar</a> |
                 <a asp-action="Details" asp-route-id="@item.IdNivel">Detalle</a> |

@@ -100,6 +100,12 @@ namespace WEB_APPLICATION.Controllers
         {
             Incidente item = await _context.Incidentes.FindAsync(id);
 
+            //if (item.Imagen == null)
+            //{
+            //    return File();
+            //}
+
+
             byte[] photoBack = item.Imagen;
 
             return File(photoBack, "image/png");
